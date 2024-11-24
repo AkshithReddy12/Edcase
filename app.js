@@ -44,6 +44,10 @@ function Calculate_distance(latitude1, longitude1, latitude2, longitude2) {
     return distanceInKilometers;
 }
 
+app.get('/',(req,res)=>{
+    res.status(201).send({message:"hello , welcome"});
+})
+
 //api to add the information of the school
 app.post('/addSchool', (req, res) => {
     const { name, address, latitude, longitude } = req.body;
